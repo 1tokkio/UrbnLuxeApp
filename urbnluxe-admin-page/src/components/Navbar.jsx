@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import { FaMoon, FaSun } from 'react-icons/fa'
 
 const Navbar = () => {
   return (
