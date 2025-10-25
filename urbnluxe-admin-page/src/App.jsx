@@ -24,12 +24,12 @@ function App() {
 
         {/* Main Section */}
         <main className="flex-1 p-6 overflow-auto">
-          {activeSection === 'Dashboard' && <Dashboard />}
-          {activeSection === 'Orders' && <Orders />}
-          {activeSection === 'Customers' && <Customers />}
-          {activeSection === 'Employees' && <Employees />}
-          {activeSection === 'Products' && <Products />}
-          {activeSection === 'Settings' && <Settings />}
+          {activeSection === 'Panel principal' && <Dashboard />}
+          {activeSection === 'Pedidos' && <Orders />}
+          {activeSection === 'Clientes' && <Customers />}
+          {activeSection === 'Empleados' && <Employees />}
+          {activeSection === 'Productos' && <Products />}
+          {activeSection === 'Ajustes' && <Settings />}
         </main>
       </div>
     </div>

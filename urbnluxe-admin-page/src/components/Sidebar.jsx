@@ -7,12 +7,12 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
       <h1 className='text-3xl font-bold hidden md:block mt-4 border-b p-4 flex justify-between items-center text-center dark:border-gray-600 dark:bg-gray-900 dark:text-white'>URBN LUXE</h1>
       <ul className='flex flex-col mt-5 text-xl px-4'>
         {[
-          {name: 'Dashboard', icon: <FaTachometerAlt />},
-          {name: 'Orders', icon: <FaShoppingCart />},
-          {name: 'Customers', icon: <FaUsers />},
-          {name: 'Employees', icon: <FaUser />},
-          {name: 'Products', icon: <FaBox />},
-          {name: 'Settings', icon: <FaCog />},
+          {name: 'Panel principal', icon: <FaTachometerAlt />},
+          {name: 'Pedidos', icon: <FaShoppingCart />},
+          {name: 'Clientes', icon: <FaUsers />},
+          {name: 'Empleados', icon: <FaUser />},
+          {name: 'Productos', icon: <FaBox />},
+          {name: 'Ajustes', icon: <FaCog />},
         ].map((item) => (
           <li 
             key={item.name} 

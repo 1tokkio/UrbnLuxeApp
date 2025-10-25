@@ -9,20 +9,20 @@ ChartJS.register(LineElement, BarElement, CategoryScale, LinearScale, PointEleme
 const Dashboard = () => {
   return (
     <div className='grow p-8'>
-        <h2 className='text-2xl text-white mb-4'>Dashboard</h2>
+        <h2 className='text-2xl font-bold text-white mb-4'>Panel principal</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6'>
-            <Card icon={<FaShoppingCart />} title="Orders" value="140"/>
-            <Card icon={<FaBox />} title="Products" value="120"/>
-            <Card icon={<FaUsers />} title="Users" value="30"/>
-            <Card icon={<FaCog />} title="Settings" value="11"/>
+            <Card icon={<FaShoppingCart />} title="Pedidos" value="140"/>
+            <Card icon={<FaBox />} title="Productos" value="120"/>
+            <Card icon={<FaUsers />} title="Usuarios" value="30"/>
+            <Card icon={<FaCog />} title="Ajustes" value="11"/>
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
             <div className='bg-white p-4 text-white dark:bg-gray-800 rounded-lg shadow-md'>
-                <h3 className='text-lg font-semibold mb-4'>Sales Data</h3>
+                <h3 className='text-lg font-semibold mb-4'>Datos de ventas</h3>
                 <Line data={dataLine} />
             </div>
             <div className='bg-white p-4 dark:bg-gray-800 rounded-lg shadow-md'>
-                <h3 className='text-lg text-white font-semibold mb-4'>Products Data</h3>
+                <h3 className='text-lg text-white font-semibold mb-4'>Datos de productos</h3>
                 <Bar data={dataBar} />
             </div>
         </div>
