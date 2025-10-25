@@ -6,41 +6,41 @@ const Orders = () => {
       id: '05gvy5', 
       customer: 'Juan Pérez', 
       date: '24 Oct 2025', 
-      total: '$200.000', 
+      total: '$69.990', 
       status: 'Enviado',
-      product: 'iPhone 15 Pro'
+      product: 'Carhartt jacket 90s'
     },
     { 
       id: 'mwvjmw', 
       customer: 'María López', 
       date: '22 Oct 2025', 
-      total: '$350.000', 
+      total: '$159.990', 
       status: 'Pendiente',
-      product: 'MacBook Air'
+      product: 'Reloj Calvin Klein Minimal'
     },
     { 
       id: 'g97rx5', 
       customer: 'Carlos Rodríguez', 
       date: '21 Oct 2025', 
-      total: '$150.000', 
+      total: '$45.990', 
       status: 'Entregado',
-      product: 'AirPods Pro'
+      product: 'Hoodie Y2K'
     },
     { 
       id: 'nwl4n5', 
       customer: 'Ana García', 
       date: '20 Oct 2025', 
-      total: '$480.000', 
+      total: '$259.990', 
       status: 'Procesando',
-      product: 'iPad Air'
+      product: 'Cinturón Louis Vuitton Initiales'
     },
     { 
       id: 'ywna875', 
       customer: 'Pedro Martínez', 
       date: '19 Oct 2025', 
-      total: '$275.000', 
+      total: '$129.990', 
       status: 'Cancelado',
-      product: 'Apple Watch'
+      product: 'Zapatillas Nike Dunk Low'
     },
   ];
 
