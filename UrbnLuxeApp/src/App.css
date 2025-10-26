@@ -1,42 +1,192 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+:root {
+  --color-blanco: #ffffff;
+  --color-blanco-humo: #f8f9fa;
+  --color-gris-claro: #e9ecef;
+  --color-gris-medio: #6c757d;
+  --color-gris-oscuro: #343a40;
+  --color-negro: #212529;
+  --color-borde: #dee2e6;
+  --color-sombra: rgba(0, 0, 0, 0.08);
+  --color-sombra-hover: rgba(0, 0, 0, 0.12);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes logo-spin {
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-blanco);
+  color: var(--color-negro);
+  line-height: 1.6;
+  font-weight: 400;
+  padding-top: 80px;
+}
+
+.main-content {
+  min-height: calc(100vh - 80px);
+}
+
+/* Tipografía moderna */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-negro);
+}
+
+p {
+  color: var(--color-gris-medio);
+  margin-bottom: 1rem;
+}
+
+/* Botones modernos */
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: var(--color-negro);
+  color: var(--color-blanco);
+}
+
+.btn-primary:hover {
+  background: var(--color-gris-oscuro);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--color-sombra);
+}
+
+.btn-outline-primary {
+  background: transparent;
+  color: var(--color-negro);
+  border: 2px solid var(--color-negro);
+}
+
+.btn-outline-primary:hover {
+  background: var(--color-negro);
+  color: var(--color-blanco);
+  transform: translateY(-1px);
+}
+
+.btn-outline-secondary {
+  background: transparent;
+  color: var(--color-gris-medio);
+  border: 2px solid var(--color-borde);
+}
+
+.btn-outline-secondary:hover {
+  background: var(--color-gris-claro);
+  border-color: var(--color-gris-medio);
+  transform: translateY(-1px);
+}
+
+/* Cards modernas */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--color-sombra);
+  transition: var(--transition);
+  background: var(--color-blanco);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px var(--color-sombra-hover);
+  transform: translateY(-2px);
+}
+
+/* Formularios modernos */
+.form-control {
+  border: 2px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: var(--transition);
+  background: var(--color-blanco);
+  color: var(--color-negro);
+}
+
+.form-control:focus {
+  border-color: var(--color-negro);
+  box-shadow: 0 0 0 3px rgba(33, 37, 41, 0.1);
+  background: var(--color-blanco);
+}
+
+.form-label {
+  font-weight: 500;
+  color: var(--color-negro);
+  margin-bottom: 0.5rem;
+}
+
+/* Navbar moderno */
+.navbar {
+  background: var(--color-blanco) !important;
+  box-shadow: 0 2px 12px var(--color-sombra);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: var(--color-negro) !important;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: var(--color-gris-medio) !important;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--color-negro) !important;
+}
+
+/* Utilidades */
+.text-primary { color: var(--color-negro) !important; }
+.text-muted { color: var(--color-gris-medio) !important; }
+.bg-light { background-color: var(--color-blanco-humo) !important; }
+.bg-dark { background-color: var(--color-negro) !important; }
+
+/* Animaciones suaves */
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(10px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  
+  .main-content {
+    min-height: calc(100vh - 70px);
+  }
+  
+  .btn {
+    padding: 0.625rem 1.25rem;
+  }
 }

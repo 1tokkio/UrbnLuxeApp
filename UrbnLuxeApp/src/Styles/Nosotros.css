@@ -1,0 +1,294 @@
+.nosotros-page {
+  min-height: 100vh;
+  background: var(--color-blanco);
+}
+
+/* Hero Section */
+.nosotros-hero {
+  background: linear-gradient(135deg, var(--color-blanco) 0%, var(--color-blanco-humo) 100%);
+  padding: 120px 0 80px;
+  text-align: center;
+  position: relative;
+}
+
+.nosotros-titulo {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-negro);
+}
+
+.nosotros-subtitulo {
+  font-size: 1.3rem;
+  color: var(--color-gris-medio);
+  font-weight: 400;
+}
+
+/* Secciones */
+.section-titulo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--color-negro);
+}
+
+/* Nuestra Historia */
+.nuestra-historia {
+  padding: 80px 0;
+  background: var(--color-blanco);
+}
+
+.historia-texto {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-gris-medio);
+  margin-bottom: 1.5rem;
+}
+
+.historia-imagen {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px var(--color-sombra);
+}
+
+.historia-imagen img {
+  width: 100%;
+  height: auto;
+  transition: var(--transition);
+}
+
+.historia-imagen:hover img {
+  transform: scale(1.02);
+}
+
+.estadisticas {
+  margin-top: 3rem;
+}
+
+.estadistica-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.estadistica-item h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-negro);
+  margin-bottom: 0.5rem;
+}
+
+.estadistica-item p {
+  color: var(--color-gris-medio);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Valores */
+.valores-section {
+  padding: 80px 0;
+  background: var(--color-blanco-humo);
+}
+
+.valor-card {
+  background: var(--color-blanco);
+  padding: 2.5rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px var(--color-sombra);
+  transition: var(--transition);
+  height: 100%;
+  text-align: center;
+  border: 1px solid var(--color-borde);
+}
+
+.valor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px var(--color-sombra-hover);
+  border-color: var(--color-negro);
+}
+
+.valor-icono {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.valor-card h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-negro);
+  font-size: 1.25rem;
+}
+
+.valor-card p {
+  color: var(--color-gris-medio);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Contacto */
+.contacto-section {
+  padding: 80px 0;
+  background: var(--color-blanco);
+}
+
+.info-contacto {
+  margin-bottom: 3rem;
+}
+
+.contacto-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.contacto-item:hover {
+  border-color: var(--color-negro);
+  transform: translateX(8px);
+}
+
+.contacto-icono {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.contacto-item h5 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-negro);
+}
+
+.contacto-item p {
+  color: var(--color-gris-medio);
+  margin: 0;
+}
+
+/* Redes Sociales */
+.redes-sociales {
+  margin-top: 2rem;
+}
+
+.redes-sociales h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-negro);
+}
+
+.redes-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.red-social-link {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color-negro);
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.red-social-link:hover {
+  border-color: var(--color-negro);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px var(--color-sombra);
+  text-decoration: none;
+  color: var(--color-negro);
+}
+
+.red-social-icono {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+/* Formulario */
+.formulario-contacto {
+  background: var(--color-blanco);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px var(--color-sombra);
+  border: 1px solid var(--color-borde);
+}
+
+.formulario-titulo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--color-negro);
+  text-align: center;
+}
+
+.alert {
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.btn-enviar {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nosotros-hero {
+    padding: 100px 0 60px;
+  }
+  
+  .nosotros-titulo {
+    font-size: 2.5rem;
+  }
+  
+  .section-titulo {
+    font-size: 2rem;
+  }
+  
+  .contacto-item {
+    padding: 1.25rem;
+  }
+  
+  .redes-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .formulario-contacto {
+    padding: 2rem 1.5rem;
+  }
+  
+  .valor-card {
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .nosotros-titulo {
+    font-size: 2rem;
+  }
+  
+  .estadistica-item h3 {
+    font-size: 2rem;
+  }
+  
+  .contacto-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contacto-icono {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

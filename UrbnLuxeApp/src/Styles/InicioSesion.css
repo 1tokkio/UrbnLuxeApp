@@ -1,0 +1,131 @@
+.inicio-sesion-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--color-blanco) 0%, var(--color-blanco-humo) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.login-card {
+  background: var(--color-blanco);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px var(--color-sombra);
+  border: 1px solid var(--color-borde);
+  overflow: hidden;
+  width: 100%;
+  max-width: 450px;
+}
+
+.login-card .card-body {
+  padding: 3rem;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-header h2 {
+  font-weight: 700;
+  color: var(--color-negro);
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.login-header p {
+  color: var(--color-gris-medio);
+  margin: 0;
+}
+
+/* Alert */
+.alert-danger {
+  background: var(--color-blanco);
+  color: var(--color-gris-oscuro);
+  border: 1px solid var(--color-borde);
+  border-left: 4px solid #dc3545;
+}
+
+/* Formulario */
+.login-form .form-label {
+  font-weight: 600;
+  color: var(--color-negro);
+}
+
+.login-form .form-control {
+  border: 2px solid var(--color-borde);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.login-form .form-control:focus {
+  border-color: var(--color-negro);
+  box-shadow: 0 0 0 3px rgba(33, 37, 41, 0.1);
+}
+
+/* Botón de envío */
+.btn-login {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+/* Enlace de cambio */
+.btn-toggle {
+  background: none;
+  border: none;
+  color: var(--color-negro);
+  font-weight: 500;
+  text-decoration: underline;
+  transition: var(--transition);
+  padding: 0;
+}
+
+.btn-toggle:hover {
+  color: var(--color-gris-oscuro);
+}
+
+/* Estado de usuario logueado */
+.user-welcome {
+  text-align: center;
+  padding: 2rem;
+}
+
+.user-welcome h3 {
+  font-weight: 700;
+  color: var(--color-negro);
+  margin-bottom: 0.5rem;
+}
+
+.user-welcome p {
+  color: var(--color-gris-medio);
+  margin-bottom: 2rem;
+}
+
+.welcome-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .inicio-sesion-page {
+    padding: 1rem;
+  }
+  
+  .login-card .card-body {
+    padding: 2rem 1.5rem;
+  }
+  
+  .welcome-actions {
+    flex-direction: column;
+  }
+  
+  .welcome-actions .btn {
+    width: 100%;
+  }
+}

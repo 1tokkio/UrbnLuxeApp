@@ -1,0 +1,165 @@
+.producto-card {
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--color-blanco);
+  transition: var(--transition);
+  height: 100%;
+  position: relative;
+}
+
+.producto-card:hover {
+  border-color: var(--color-negro);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px var(--color-sombra-hover);
+}
+
+.producto-imagen-container {
+  position: relative;
+  overflow: hidden;
+  height: 280px;
+  background: var(--color-blanco-humo);
+}
+
+.producto-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.producto-card:hover .producto-imagen {
+  transform: scale(1.05);
+}
+
+.producto-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 37, 41, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.producto-card:hover .producto-overlay {
+  opacity: 1;
+}
+
+.btn-agregar {
+  background: var(--color-blanco);
+  color: var(--color-negro);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transform: translateY(10px);
+  transition: var(--transition);
+}
+
+.producto-card:hover .btn-agregar {
+  transform: translateY(0);
+}
+
+.btn-agregar:hover {
+  background: var(--color-negro);
+  color: var(--color-blanco);
+}
+
+.producto-agotado {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--color-gris-medio);
+  color: var(--color-blanco);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.producto-info {
+  padding: 1.5rem;
+}
+
+.producto-marca {
+  font-size: 0.75rem;
+  color: var(--color-gris-medio);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.producto-nombre {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-negro);
+  font-size: 1.1rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.producto-descripcion {
+  font-size: 0.9rem;
+  color: var(--color-gris-medio);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.producto-precio-container {
+  margin-bottom: 1rem;
+}
+
+.producto-precio {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-negro);
+}
+
+.producto-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.producto-actions .btn {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .producto-imagen-container {
+    height: 240px;
+  }
+  
+  .producto-info {
+    padding: 1.25rem;
+  }
+  
+  .producto-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .producto-actions .btn {
+    flex: none;
+  }
+}
