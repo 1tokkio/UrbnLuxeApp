@@ -10,7 +10,7 @@ import Settings from './components/Settings'
 
 function App() {
   // Estado que controla la sección activa
-  const [activeSection, setActiveSection] = useState('Dashboard');
+  const [activeSection, setActiveSection] = useState('Panel principal');
 
   return (
     <div className="flex h-screen bg-gray-100 dark:bg-gray-900">
