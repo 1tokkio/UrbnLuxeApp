@@ -65,7 +65,7 @@ const Orders = () => {
   return (
     <div className="min-h-screen dark:bg-gray-900 p-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl font-bold mb-6 text-white">Orders</h2>
+        <h2 className="text-2xl font-bold mb-6 text-white">Pedidos</h2>
         
         <div className="bg-gray-900 rounded-lg shadow-lg overflow-hidden">
           <div className="overflow-x-auto">
