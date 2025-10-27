@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { formatPrice } from '../../Productos.js'
+import { formatPrice } from '../../Data/Productos.js'
 import './ProductoCard.css'
 
 const ProductoCard = ({ producto, onAgregarAlCarrito }) => {

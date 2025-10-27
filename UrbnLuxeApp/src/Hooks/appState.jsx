@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react'
-import { usuariosStorage, carritoStorage, productosStorage } from '../localStorage.js'
-import { products } from '../Productos.js'
+import { usuariosStorage, carritoStorage, productosStorage } from '../Utils/localStorage.js'
+import { products } from '../Data/Productos.js'
 
 export const useAppState = () => {
   const [usuario, setUsuario] = useState(null)
   const [carrito, setCarrito] = useState([])
   const [productos, setProductos] = useState([])
 
-  // Cargar estado inicial desde localStorage
+  // Este bloque inicia el estado inicial de la pagina desde localStorage
   useEffect(() => {
-    // Cargar usuario
+    // Inicializar usuarios
     const usuarioGuardado = usuariosStorage.getUsuarioActual()
     if (usuarioGuardado) {
       setUsuario(usuarioGuardado)
@@ -20,17 +20,17 @@ export const useAppState = () => {
     if (productosGuardados) {
       setProductos(productosGuardados)
     } else {
-      // Si no hay productos guardados, usar los de data/products y guardarlos
+      // Si no hay productos guardados, usar los de productos data/products y guardarlos
       setProductos(products)
       productosStorage.setProductos(products)
     }
 
-    // Cargar carrito (después de cargar usuario para tener el correcto)
+    // Inicializar el carrito (después de cargar usuario para tener el correcto)
     const carritoGuardado = carritoStorage.getCarrito()
     setCarrito(carritoGuardado)
   }, [])
 
-  // Registrar usuario
+  // Registrar usuarios
   const registrarUsuario = (usuarioData) => {
     const nuevoUsuario = usuariosStorage.registrarUsuario(usuarioData)
     setUsuario(nuevoUsuario)
@@ -51,7 +51,8 @@ export const useAppState = () => {
     if (usuario) {
       setUsuario(usuario)
       
-      // Transferir carrito anónimo al usuario
+      /* Transferir carrito anónimo al usuario, cuando el usuario agrego
+       productos sin haber iniciado sesión */
       carritoStorage.transferirCarritoAnonimo(usuario.id)
       
       // Actualizar carrito con el del usuario
@@ -63,15 +64,17 @@ export const useAppState = () => {
 
   // Cerrar sesión
   const cerrarSesion = () => {
-    usuariosStorage.cerrarSesion()
-    setUsuario(null)
+    usuariosStorage.cerrarSesion();
+    setUsuario(null);
     
-    // Mantener el carrito como anónimo
-    const carritoActual = carritoStorage.getCarrito()
-    setCarrito(carritoActual)
-  }
+    // Opcional: mantener el carrito como anónimo
+    const carritoActual = carritoStorage.getCarrito();
+    setCarrito(carritoActual);
+    
+    console.log('Sesión cerrada correctamente');
+  };
 
-  // Agregar al carrito
+  // Agregar productos al carrito
   const agregarAlCarrito = (producto, tallaSeleccionada = '', colorSeleccionado = '', cantidad = 1) => {
     setCarrito(prev => {
       const productoConVariante = {
@@ -103,7 +106,7 @@ export const useAppState = () => {
     })
   }
 
-  // Eliminar del carrito
+  // Eliminar productos del carrito
   const eliminarDelCarrito = (idUnico) => {
     setCarrito(prev => {
       const nuevoCarrito = prev.filter(item => item.idUnico !== idUnico)
@@ -112,7 +115,7 @@ export const useAppState = () => {
     })
   }
 
-  // Actualizar cantidad en carrito
+  // Actualizar cantidad de productos en el carrito
   const actualizarCantidad = (idUnico, cantidad) => {
     if (cantidad === 0) {
       eliminarDelCarrito(idUnico)
@@ -127,7 +130,7 @@ export const useAppState = () => {
     }
   }
 
-  // Limpiar carrito
+  // Limpiar los productos del carrito
   const limpiarCarrito = () => {
     setCarrito([])
     carritoStorage.clearCarrito()

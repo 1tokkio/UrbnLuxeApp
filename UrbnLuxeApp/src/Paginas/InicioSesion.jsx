@@ -85,9 +85,9 @@ const InicioSesion = ({ usuario, onRegistrar, onIniciarSesion, onCerrarSesion })
   }
 
   const handleCerrarSesion = () => {
-    onCerrarSesion()
-    navigate('/')
-  }
+    onCerrarSesion();
+    navigate('/');
+  };
 
   if (usuario) {
     return (

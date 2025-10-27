@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { getProductById, formatPrice } from '../Productos.js'
+import { getProductById, formatPrice } from '../Data/Productos.js'
 import './../Styles/ProductosDetalle.css'
 
 const ProductosDetalle = ({ agregarAlCarrito }) => {

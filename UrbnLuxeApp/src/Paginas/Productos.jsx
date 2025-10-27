@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ProductoCard from '../Componentes/ProductoCard/ProductoCard.jsx'
-import { products, getProductsByCategory, formatPrice } from '../Productos.js'
+import { products, getProductsByCategory, formatPrice } from '../Data/Productos.js'
 import './../Styles/Productos.css'
 
 const Productos = ({ agregarAlCarrito }) => {

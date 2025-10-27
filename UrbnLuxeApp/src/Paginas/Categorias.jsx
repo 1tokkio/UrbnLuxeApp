@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import ProductoCard from '../Componentes/ProductoCard/ProductoCard'
-import { products, getProductsByCategory, formatPrice } from './../Productos.js'
+import { products, getProductsByCategory, formatPrice } from '../Data/Productos.js'
 import './../Styles/Categorias.css'
+import { FaBox } from "react-icons/fa";
+import { MdOutlineGirl } from "react-icons/md";
+import { MdBoy } from "react-icons/md";
+import { GiRunningShoe } from "react-icons/gi";
+import { FaGlasses } from "react-icons/fa6";
+import { GiMonclerJacket } from "react-icons/gi";
+
 
 const Categorias = ({ agregarAlCarrito }) => {
   const [categoriaActiva, setCategoriaActiva] = useState('todos')
@@ -12,37 +19,37 @@ const Categorias = ({ agregarAlCarrito }) => {
     {
       id: 'todos',
       nombre: 'Todos los Productos',
-      icono: '📦',
+      icono: <FaBox size={24}/>,
       count: products.length
     },
     {
       id: 'hombre',
       nombre: 'Ropa Hombre',
-      icono: '👨',
+      icono: <MdBoy size={54}/>,
       count: products.filter(p => p.category === 'camisetas' || p.category === 'sudaderas' || p.category === 'pantalones').length
     },
     {
       id: 'mujer',
       nombre: 'Ropa Mujer',
-      icono: '👩',
+      icono: <MdOutlineGirl size={54}/>,
       count: products.filter(p => p.category === 'poleras' || p.category === 'chaquetas').length
     },
     {
       id: 'calzado',
       nombre: 'Zapatillas',
-      icono: '👟',
+      icono: <GiRunningShoe size={34}/>,
       count: products.filter(p => p.category === 'calzado').length
     },
     {
       id: 'accesorios',
       nombre: 'Accesorios',
-      icono: '🕶️',
+      icono: <FaGlasses size={34}/>,
       count: products.filter(p => p.category === 'accesorios').length
     },
     {
       id: 'chaquetas',
       nombre: 'Chaquetas',
-      icono: '🧥',
+      icono: <GiMonclerJacket size={34}/>,
       count: products.filter(p => p.category === 'chaquetas').length
     }
   ]
@@ -104,7 +111,7 @@ const Categorias = ({ agregarAlCarrito }) => {
           </div>
         </div>
 
-        {/* Navegación de Categorías */}
+        {}
         <div className="row mb-5">
           <div className="col-12">
             <div className="categorias-nav">
@@ -137,19 +144,20 @@ const Categorias = ({ agregarAlCarrito }) => {
           </div>
         </div>
 
-        {/* Grid de Productos */}
-        <div className="row g-4">
-          {productosFiltrados.map(producto => (
-            <div key={producto.id} className="col-lg-3 col-md-4 col-sm-6">
-              <ProductoCard 
-                producto={producto}
-                onAgregarAlCarrito={agregarAlCarrito}
+        {}
+        <div className="productos-grid-container">
+          <div className="productos-grid">
+            {productosFiltrados.map(producto => (
+             <ProductoCard 
+              key={producto.id}
+              producto={producto}
+              onAgregarAlCarrito={agregarAlCarrito}
               />
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Mensaje cuando no hay productos */}
+        {}
         {productosFiltrados.length === 0 && (
           <div className="row">
             <div className="col-12 text-center py-5">
@@ -169,7 +177,7 @@ const Categorias = ({ agregarAlCarrito }) => {
           </div>
         )}
 
-        {/* Banner de Categorías */}
+        {}
         <div className="row mt-5">
           <div className="col-12">
             <div className="categorias-banner">
@@ -178,7 +186,7 @@ const Categorias = ({ agregarAlCarrito }) => {
                   <div className="banner-card hombre">
                     <div className="banner-content">
                       <h4>Colección Hombre</h4>
-                      <p>Estilo urbano para él</p>
+                      <p>Estilo urbano para ti sangre</p>
                       <button 
                         className="btn btn-outline-light"
                         onClick={() => setCategoriaActiva('hombre')}
@@ -192,7 +200,7 @@ const Categorias = ({ agregarAlCarrito }) => {
                   <div className="banner-card mujer">
                     <div className="banner-content">
                       <h4>Colección Mujer</h4>
-                      <p>Tendencias femeninas</p>
+                      <p>En breve nueva linea femenina</p>
                       <button 
                         className="btn btn-outline-light"
                         onClick={() => setCategoriaActiva('mujer')}
@@ -206,7 +214,7 @@ const Categorias = ({ agregarAlCarrito }) => {
                   <div className="banner-card accesorios">
                     <div className="banner-content">
                       <h4>Accesorios</h4>
-                      <p>Complementa tu estilo</p>
+                      <p>Complementa tu corte</p>
                       <button 
                         className="btn btn-outline-light"
                         onClick={() => setCategoriaActiva('accesorios')}

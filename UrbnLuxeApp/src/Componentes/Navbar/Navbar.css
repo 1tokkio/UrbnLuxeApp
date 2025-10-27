@@ -1,103 +1,40 @@
 .navbar {
-  height: 80px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  height: 70px;
+  background: var(--color-blanco) !important;
+  box-shadow: 0 2px 8px var(--color-sombra);
+  border-bottom: 1px solid var(--color-borde);
 }
 
 .navbar-brand {
-  font-size: 1.75rem;
-  letter-spacing: -0.5px;
-  position: relative;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-.navbar-brand::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--color-negro);
-  transform: scaleX(0);
-  transition: var(--transition);
-}
-
-.navbar-brand:hover::after {
-  transform: scaleX(1);
-}
-
-.navbar-nav .nav-item {
-  margin: 0 0.5rem;
-}
-
-.navbar-nav .nav-link {
-  position: relative;
-  padding: 0.5rem 0;
+.nav-link {
   font-weight: 500;
-}
-
-.navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--color-negro);
   transition: var(--transition);
 }
 
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-  width: 100%;
+.nav-link:hover {
+  color: var(--color-negro) !important;
 }
 
-.navbar-toggler {
-  border: none;
-  padding: 0.25rem;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-/* Dropdown moderno */
 .dropdown-menu {
   border: none;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px var(--color-sombra);
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.dropdown-item {
   border-radius: 8px;
-  padding: 0.75rem 1rem;
-  font-weight: 500;
-  transition: var(--transition);
+  box-shadow: 0 4px 16px var(--color-sombra);
 }
 
-.dropdown-item:hover {
-  background: var(--color-blanco-humo);
-}
-
-/* Badge del carrito */
 .badge {
   font-size: 0.7rem;
-  padding: 0.25rem 0.5rem;
 }
 
-/* Responsive */
-@media (max-width: 991.98px) {
+@media (max-width: 991px) {
   .navbar-collapse {
     background: var(--color-blanco);
-    border-radius: 12px;
-    box-shadow: 0 8px 24px var(--color-sombra);
-    padding: 1rem;
+    border-radius: 8px;
     margin-top: 1rem;
-  }
-  
-  .navbar-nav .nav-item {
-    margin: 0.25rem 0;
+    padding: 1rem;
+    box-shadow: 0 4px 16px var(--color-sombra);
   }
 }

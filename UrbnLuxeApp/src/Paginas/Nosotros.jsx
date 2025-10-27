@@ -29,14 +29,13 @@ const Nosotros = () => {
   const validateForm = () => {
     const newErrors = {}
 
-    // Validación de nombre
+    // Validaciones de nombre, email, telefono y mensaje
     if (!formData.nombre.trim()) {
       newErrors.nombre = 'El nombre es requerido'
     } else if (formData.nombre.trim().length < 2) {
       newErrors.nombre = 'El nombre debe tener al menos 2 caracteres'
     }
 
-    // Validación de email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!formData.email.trim()) {
       newErrors.email = 'El email es requerido'
@@ -44,13 +43,12 @@ const Nosotros = () => {
       newErrors.email = 'Ingresa un email válido'
     }
 
-    // Validación de teléfono
     const phoneRegex = /^[0-9+-\s()]{8,}$/
     if (formData.telefono && !phoneRegex.test(formData.telefono)) {
       newErrors.telefono = 'Ingresa un teléfono válido'
     }
 
-    // Validación de mensaje
+  
     if (!formData.mensaje.trim()) {
       newErrors.mensaje = 'El mensaje es requerido'
     } else if (formData.mensaje.trim().length < 10) {
@@ -65,7 +63,6 @@ const Nosotros = () => {
     const formErrors = validateForm()
     
     if (Object.keys(formErrors).length === 0) {
-      // Simular envío del formulario
       console.log('Formulario enviado:', formData)
       setEnviado(true)
       setFormData({
@@ -82,55 +79,49 @@ const Nosotros = () => {
 
   return (
     <div className="nosotros-page">
-      {/* Hero Section */}
+      {}
       <section className="nosotros-hero">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto text-center">
               <h1 className="nosotros-titulo">Sobre URBN LUXE</h1>
-              <p className="nosotros-subtitulo">
-                Más que una marca, un estilo de vida urbano
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Nuestra Historia */}
+      {}
       <section className="nuestra-historia py-5">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
               <h2 className="section-titulo">Nuestra Historia</h2>
               <p className="historia-texto">
-                URBN LUXE nació en 2020 con la visión de revolucionar la moda urbana, 
+                URBN LUXE nació en 2025 con la visión de ofrecer al cliente una seleccion de prendas premium, 
                 combinando estilo, calidad y conciencia social. Lo que comenzó como 
-                un pequeño proyecto entre amigos, hoy se ha convertido en un referente 
-                de la moda streetwear en Latinoamérica.
+                un pequeño proyecto entre amigos, hoy se ha convertido en una tienda real y funcional.
               </p>
               <p className="historia-texto">
-                Nos especializamos en prendas que no solo destacan por su diseño 
-                vanguardista, sino también por su calidad excepcional y producción 
-                responsable. Cada pieza cuenta una historia y está diseñada para 
-                aquellos que buscan expresar su identidad a través de la moda.
+                Principalmente nuestras prendas son seleccionadas para una parte de la poblacion, cada prenda es 
+                elegida por su calidad excepcional y producción responsable.
               </p>
               <div className="estadisticas">
                 <div className="row text-center">
                   <div className="col-4">
                     <div className="estadistica-item">
-                      <h3>5K+</h3>
+                      <h3>1</h3>
                       <p>Clientes Satisfechos</p>
                     </div>
                   </div>
                   <div className="col-4">
                     <div className="estadistica-item">
-                      <h3>18</h3>
+                      <h3>10</h3>
                       <p>Marcas Exclusivas</p>
                     </div>
                   </div>
                   <div className="col-4">
                     <div className="estadistica-item">
-                      <h3>3</h3>
+                      <h3>1</h3>
                       <p>Años de Experiencia</p>
                     </div>
                   </div>
@@ -211,27 +202,27 @@ const Nosotros = () => {
                   <span className="contacto-icono">📞</span>
                   <div>
                     <h5>Teléfono</h5>
-                    <p>+56 9 1234 5678</p>
+                    <p>+56 9 XXXX 5678</p>
                   </div>
                 </div>
                 <div className="contacto-item">
                   <span className="contacto-icono">📍</span>
                   <div>
                     <h5>Ubicación</h5>
-                    <p>Av. Providencia 1234, Santiago, Chile</p>
+                    <p>Egaña 651, 5480000 Puerto Montt, Los Lagos</p>
                   </div>
                 </div>
                 <div className="contacto-item">
                   <span className="contacto-icono">🕒</span>
                   <div>
                     <h5>Horario</h5>
-                    <p>Lunes a Viernes: 10:00 - 20:00<br/>
-                       Sábados: 11:00 - 19:00</p>
+                    <p>Lunes a Viernes: 9:00 - 20:00<br/>
+                       Sábados: 11:00 - 14:00</p>
                   </div>
                 </div>
               </div>
 
-              {/* Redes Sociales */}
+              {}
               <div className="redes-sociales">
                 <h5>Síguenos en:</h5>
                 <div className="redes-links">

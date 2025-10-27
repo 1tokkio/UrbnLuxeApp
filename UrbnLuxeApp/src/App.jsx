@@ -36,17 +36,17 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar 
+               <Navbar 
           carrito={carrito} 
           usuario={usuario}
           onToggleSidebar={toggleSidebar}
-          onCerrarSesion={cerrarSesion}
+          onCerrarSesion={cerrarSesion} 
         />
         <Sidebar 
           abierto={sidebarAbierto} 
           onCerrar={() => setSidebarAbierto(false)}
           usuario={usuario}
-          onCerrarSesion={cerrarSesion}
+          onCerrarSesion={cerrarSesion} 
         />
         <main className="main-content">
           <Routes>

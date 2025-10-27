@@ -1,8 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './Sidebar.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Sidebar.css';
 
-const Sidebar = ({ abierto, onCerrar }) => {
+const Sidebar = ({ abierto, onCerrar, usuario, onCerrarSesion }) => {
+  
+  const handleCerrarSesion = () => {
+    onCerrarSesion();
+    onCerrar(); // Cerrar el sidebar también
+  };
+
   return (
     <>
       <div className={`sidebar-overlay ${abierto ? 'active' : ''}`} onClick={onCerrar}></div>
@@ -15,27 +21,46 @@ const Sidebar = ({ abierto, onCerrar }) => {
         
         <div className="sidebar-content">
           <Link to="/" className="sidebar-link" onClick={onCerrar}>
-            Inicio
+            🏠 Inicio
           </Link>
           <Link to="/productos" className="sidebar-link" onClick={onCerrar}>
-            Productos
+            🛍️ Productos
           </Link>
           <Link to="/categorias" className="sidebar-link" onClick={onCerrar}>
-            Categorías
+            📂 Categorías
           </Link>
           <Link to="/nosotros" className="sidebar-link" onClick={onCerrar}>
-            Nosotros
+            ℹ️ Nosotros
           </Link>
           <Link to="/carrito" className="sidebar-link" onClick={onCerrar}>
-            Carrito
+            🛒 Carrito
           </Link>
-          <Link to="/inicio-sesion" className="sidebar-link" onClick={onCerrar}>
-            Iniciar Sesión
-          </Link>
+          
+          {/* Sección de usuario */}
+          <div className="sidebar-user-section">
+            {usuario ? (
+              <>
+                <div className="sidebar-user-info">
+                  <span className="sidebar-user-name">👤 {usuario.nombre}</span>
+                  <span className="sidebar-user-email">{usuario.email}</span>
+                </div>
+                <button 
+                  className="sidebar-link sidebar-logout"
+                  onClick={handleCerrarSesion}
+                >
+                  🚪 Cerrar Sesión
+                </button>
+              </>
+            ) : (
+              <Link to="/inicio-sesion" className="sidebar-link" onClick={onCerrar}>
+                🔐 Iniciar Sesión
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

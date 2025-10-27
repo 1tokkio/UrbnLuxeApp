@@ -1,15 +1,15 @@
-import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import './Navbar.css'
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = ({ carrito, usuario, onToggleSidebar, onCerrarSesion }) => {
-  const navigate = useNavigate()
-  const totalItems = carrito.reduce((total, item) => total + item.cantidad, 0)
+  const navigate = useNavigate();
+  const totalItems = carrito.reduce((total, item) => total + item.cantidad, 0);
 
   const handleCerrarSesion = () => {
-    onCerrarSesion()
-    navigate('/')
-  }
+    onCerrarSesion();
+    navigate('/'); // Redirigir al home después de cerrar sesión
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -43,7 +43,8 @@ const Navbar = ({ carrito, usuario, onToggleSidebar, onCerrarSesion }) => {
           </ul>
 
           <div className="d-flex align-items-center">
-            <Link to="/carrito" className="btn btn-outline-light position-relative me-2">
+            {/* Icono del carrito */}
+            <Link to="/carrito" className="btn btn-outline-light position-relative me-3">
               🛒
               {totalItems > 0 && (
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -52,42 +53,55 @@ const Navbar = ({ carrito, usuario, onToggleSidebar, onCerrarSesion }) => {
               )}
             </Link>
             
+            {/* Menú de usuario */}
             {usuario ? (
               <div className="dropdown">
                 <button 
                   className="btn btn-outline-light dropdown-toggle"
                   type="button"
                   data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
-                  Hola, {usuario.nombre}
+                  👤 {usuario.nombre}
                 </button>
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu dropdown-menu-end">
                   <li>
-                    <span className="dropdown-item-text">
-                      <small>{usuario.email}</small>
+                    <span className="dropdown-item-text text-muted small">
+                      {usuario.email}
                     </span>
                   </li>
                   <li><hr className="dropdown-divider" /></li>
                   <li>
+                    <Link className="dropdown-item" to="/carrito">
+                      🛒 Mi Carrito
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="dropdown-item" to="/productos">
+                      🛍️ Seguir Comprando
+                    </Link>
+                  </li>
+                  <li><hr className="dropdown-divider" /></li>
+                  <li>
                     <button 
-                      className="dropdown-item"
+                      className="dropdown-item text-danger"
                       onClick={handleCerrarSesion}
                     >
-                      Cerrar Sesión
+                      🚪 Cerrar Sesión
                     </button>
                   </li>
                 </ul>
               </div>
             ) : (
               <Link to="/inicio-sesion" className="btn btn-outline-light">
-                Iniciar Sesión
+                👤 Iniciar Sesión
               </Link>
             )}
           </div>
         </div>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

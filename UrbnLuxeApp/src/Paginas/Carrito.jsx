@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { formatPrice } from '../Productos.js'
+import { formatPrice } from '../Data/Productos.js'
 import '../Styles/Carrito.css'
 
 const Carrito = ({ carrito, eliminarDelCarrito, actualizarCantidad, limpiarCarrito, usuario }) => {
@@ -13,7 +13,7 @@ const Carrito = ({ carrito, eliminarDelCarrito, actualizarCantidad, limpiarCarri
           <div className="row">
             <div className="col-12 text-center">
               <h2>Tu carrito está vacío</h2>
-              <p className="lead mb-4">Descubre nuestros productos y añade algunos a tu carrito</p>
+              <p className="lead mb-4">Visita nuestro nuevo catalogo y añade algunos a tu carrito</p>
               <Link to="/productos" className="btn btn-primary btn-lg">
                 Explorar Productos
               </Link>
@@ -29,7 +29,7 @@ const Carrito = ({ carrito, eliminarDelCarrito, actualizarCantidad, limpiarCarri
       <div className="container mt-5 pt-5">
         <div className="row">
           <div className="col-12">
-            <h1 className="mb-4">Tu Carrito de Compras</h1>
+            <h1 className="mb-4">Tu Carrito</h1>
             {usuario && (
               <div className="alert alert-info">
                 <strong>Hola, {usuario.nombre}!</strong> Tu carrito está guardado en tu cuenta.
