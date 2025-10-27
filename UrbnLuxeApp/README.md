@@ -1,16 +1,106 @@
-# React + Vite
+URBN LUXE - Plataforma de Ecommerce
+Una aplicación moderna de comercio electrónico construida con React para moda urbana y ropa de lujo.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Características
+Catálogo de Productos: Explora la colección completa de moda urbana
 
-Currently, two official plugins are available:
+Carrito de Compras: Agrega productos con almacenamiento persistente
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Autenticación de Usuarios: Sistema de registro e inicio de sesión
 
-## React Compiler
+Filtrado por Categorías: Organiza productos por hombre, mujer, zapatillas, accesorios
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Diseño Responsive: Adaptable a todos los dispositivos
 
-## Expanding the ESLint configuration
+Búsqueda de Productos: Encuentra productos por nombre, marca o descripción
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tecnologías Utilizadas
+React 18
+
+Vite
+
+React Router DOM
+
+Bootstrap 5
+
+LocalStorage para persistencia de datos
+
+Instalación
+Prerrequisitos
+Node.js 16+
+
+npm
+
+1. Clonar el Repositorio
+bash
+git clone [url-del-repositorio]
+cd UrbnLuxeApp
+2. Instalar Dependencias
+bash
+npm install
+3. Ejecutar en Desarrollo
+bash
+npm run dev
+La aplicación estará disponible en http://localhost:5173
+
+4. Construir para Producción
+bash
+npm run build
+Estructura del Proyecto
+text
+src/
+├── components/          # Componentes reutilizables
+│   ├── Navbar/         # Barra de navegación
+│   ├── Sidebar/        # Menú lateral
+│   └── ProductoCard/   # Tarjeta de producto
+├── pages/              # Páginas de la aplicación
+│   ├── Home.jsx        # Página principal
+│   ├── Productos.jsx   # Catálogo de productos
+│   ├── Categorias.jsx  # Productos por categoría
+│   ├── Carrito.jsx     # Carrito de compras
+│   ├── InicioSesion.jsx # Autenticación
+│   └── Nosotros.jsx    # Información de la empresa
+├── data/
+│   └── products.js     # Base de datos de productos
+└── utils/
+    └── localStorage.js # Gestión de almacenamiento local
+Funcionalidades Principales
+Gestión de Usuarios
+Registro de nuevos usuarios
+
+Inicio y cierre de sesión
+
+Carrito persistente por usuario
+
+Carrito de Compras
+Agregar/eliminar productos
+
+Actualizar cantidades
+
+Persistencia en localStorage
+
+Cálculo automático de totales
+
+Catálogo de Productos
+18 productos de moda urbana
+
+Filtrado por categorías
+
+Búsqueda por texto
+
+Marcas premium: Nike, Louis Vuitton, Arc'teryx, Calvin Klein
+
+Diseño y Experiencia
+Interfaz moderna en blanco, gris y negro
+
+Navegación intuitiva
+
+Totalmente responsive
+
+Animaciones suaves
+
+Scripts Disponibles
+bash
+npm run dev          # Servidor de desarrollo
+npm run build        # Construcción para producción
+npm run preview      # Vista previa de producción
