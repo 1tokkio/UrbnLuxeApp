@@ -39,10 +39,6 @@ Esta plataforma permite explorar, filtrar y comprar productos de moda urbana de 
 - LocalStorage para persistencia de datos  
 
 ---
-![Vista previa de URBN LUXE](./src/assets/urbnluxe_mainpage.png)
-
-    
-
 Instalación
 -----------
 
