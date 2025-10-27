@@ -1,0 +1,107 @@
+.productos-page {
+  min-height: 100vh;
+  background: var(--color-blanco);
+  padding: 2rem 0;
+}
+
+.productos-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.productos-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-negro);
+}
+
+.productos-header .lead {
+  font-size: 1.1rem;
+  color: var(--color-gris-medio);
+}
+
+/* Filtros modernos */
+.filtros-container {
+  background: var(--color-blanco);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px var(--color-sombra);
+  margin-bottom: 2rem;
+}
+
+.filtros-row {
+  align-items: end;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--color-negro);
+  margin-bottom: 0.5rem;
+}
+
+/* Contador de resultados */
+.resultados-count {
+  background: var(--color-blanco-humo);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.resultados-count p {
+  margin: 0;
+  font-weight: 500;
+  color: var(--color-gris-oscuro);
+}
+
+/* Grid de productos */
+.productos-grid {
+  margin-bottom: 3rem;
+}
+
+/* No products */
+.no-products {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--color-blanco);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px var(--color-sombra);
+}
+
+.no-products h3 {
+  color: var(--color-negro);
+  margin-bottom: 1rem;
+}
+
+.no-products p {
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .productos-page {
+    padding: 1rem 0;
+  }
+  
+  .productos-header h1 {
+    font-size: 2rem;
+  }
+  
+  .filtros-container {
+    padding: 1rem;
+  }
+  
+  .filtros-row .col-md-4,
+  .filtros-row .col-md-3,
+  .filtros-row .col-md-2 {
+    margin-bottom: 1rem;
+  }
+  
+  .no-products {
+    padding: 3rem 1rem;
+  }
+}

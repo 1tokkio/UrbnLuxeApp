@@ -1,0 +1,129 @@
+URBN LUXE - Plataforma de Ecommerce
+===================================
+
+Una aplicación moderna de comercio electrónico construida con React para moda urbana y ropa de lujo.
+
+Características
+---------------
+
+*   **Catálogo de Productos**: Explora la colección completa de moda urbana
+    
+*   **Carrito de Compras**: Agrega productos con almacenamiento persistente
+    
+*   **Autenticación de Usuarios**: Sistema de registro e inicio de sesión
+    
+*   **Filtrado por Categorías**: Organiza productos por hombre, mujer, zapatillas, accesorios
+    
+*   **Diseño Responsive**: Adaptable a todos los dispositivos
+    
+*   **Búsqueda de Productos**: Encuentra productos por nombre, marca o descripción
+    
+
+Tecnologías Utilizadas
+----------------------
+
+*   React 18
+    
+*   Vite
+    
+*   React Router DOM
+    
+*   Bootstrap 5
+    
+*   LocalStorage para persistencia de datos
+    
+
+Instalación
+-----------
+
+### Prerrequisitos
+
+*   Node.js 16+
+    
+*   npm
+    
+
+### 1\. Clonar el Repositorio
+
+bash
+
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   git clone [url-del-repositorio]  cd UrbnLuxeApp   `
+
+### 2\. Instalar Dependencias
+
+bash
+
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   npm install   `
+
+### 3\. Ejecutar en Desarrollo
+
+bash
+
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   npm run dev   `
+
+La aplicación estará disponible en http://localhost:5173
+
+### 4\. Construir para Producción
+
+bash
+
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   npm run build   `
+
+Estructura del Proyecto
+-----------------------
+
+text
+
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   src/  ├── components/          # Componentes reutilizables  │   ├── Navbar/         # Barra de navegación  │   ├── Sidebar/        # Menú lateral  │   └── ProductoCard/   # Tarjeta de producto  ├── pages/              # Páginas de la aplicación  │   ├── Home.jsx        # Página principal  │   ├── Productos.jsx   # Catálogo de productos  │   ├── Categorias.jsx  # Productos por categoría  │   ├── Carrito.jsx     # Carrito de compras  │   ├── InicioSesion.jsx # Autenticación  │   └── Nosotros.jsx    # Información de la empresa  ├── data/  │   └── products.js     # Base de datos de productos  └── utils/      └── localStorage.js # Gestión de almacenamiento local   `
+
+Funcionalidades Principales
+---------------------------
+
+### Gestión de Usuarios
+
+*   Registro de nuevos usuarios
+    
+*   Inicio y cierre de sesión
+    
+*   Carrito persistente por usuario
+    
+
+### Carrito de Compras
+
+*   Agregar/eliminar productos
+    
+*   Actualizar cantidades
+    
+*   Persistencia en localStorage
+    
+*   Cálculo automático de totales
+    
+
+### Catálogo de Productos
+
+*   18 productos de moda urbana
+    
+*   Filtrado por categorías
+    
+*   Búsqueda por texto
+    
+*   Marcas premium: Nike, Louis Vuitton, Arc'teryx, Calvin Klein
+    
+
+### Diseño y Experiencia
+
+*   Interfaz moderna en blanco, gris y negro
+    
+*   Navegación intuitiva
+    
+*   Totalmente responsive
+    
+*   Animaciones suaves
+    
+
+Scripts Disponibles
+-------------------
+
+bash
+
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   npm run dev          # Servidor de desarrollo  npm run build        # Construcción para producción  npm run preview      # Vista previa de producción   `

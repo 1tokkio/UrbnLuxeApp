@@ -1,0 +1,81 @@
+:root {
+  --color-blanco: #ffffff;
+  --color-blanco-humo: #f8f9fa;
+  --color-gris-claro: #e9ecef;
+  --color-gris-medio: #6c757d;
+  --color-gris-oscuro: #343a40;
+  --color-negro: #212529;
+  --color-borde: #dee2e6;
+  --color-sombra: rgba(0, 0, 0, 0.08);
+  --color-sombra-hover: rgba(0, 0, 0, 0.12);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--color-blanco);
+  color: var(--color-negro);
+  padding-top: 70px;
+}
+
+.main-content {
+  min-height: calc(100vh - 70px);
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--color-negro);
+  color: var(--color-blanco);
+}
+
+.btn-primary:hover {
+  background: var(--color-gris-oscuro);
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  background: transparent;
+  color: var(--color-negro);
+  border: 2px solid var(--color-negro);
+}
+
+.btn-outline-primary:hover {
+  background: var(--color-negro);
+  color: var(--color-blanco);
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--color-sombra);
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px var(--color-sombra-hover);
+}
+
+.form-control {
+  border: 2px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-color: var(--color-negro);
+  box-shadow: 0 0 0 3px rgba(33, 37, 41, 0.1);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+}

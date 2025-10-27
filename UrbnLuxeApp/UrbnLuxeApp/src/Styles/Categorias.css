@@ -1,0 +1,138 @@
+.categorias-page {
+  min-height: 100vh;
+  background: var(--color-blanco);
+}
+
+.categorias-header {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.categorias-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.categorias-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categoria-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  border: 2px solid var(--color-borde);
+  border-radius: 16px;
+  background: var(--color-blanco);
+  transition: var(--transition);
+  min-height: 140px;
+  justify-content: center;
+}
+
+.categoria-btn:hover,
+.categoria-btn.active {
+  border-color: var(--color-negro);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--color-sombra-hover);
+}
+
+.categoria-btn.active {
+  background: var(--color-negro);
+  color: var(--color-blanco);
+}
+
+.categoria-icono {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.categoria-nombre {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.categoria-count {
+  background: var(--color-blanco-humo);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.categoria-btn.active .categoria-count {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.categoria-info {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.categoria-titulo {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.banner-card {
+  padding: 2rem;
+  border: 2px solid var(--color-borde);
+  border-radius: 16px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.banner-card:hover {
+  border-color: var(--color-negro);
+  transform: translateY(-4px);
+}
+
+.no-products {
+  text-align: center;
+  padding: 3rem;
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .categorias-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .categoria-btn {
+    padding: 1.5rem 0.5rem;
+    min-height: 120px;
+  }
+  
+  .categoria-icono {
+    font-size: 2rem;
+  }
+  
+  .productos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
