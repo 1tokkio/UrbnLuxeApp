@@ -102,6 +102,20 @@ const Employees = () => {
     setShowAddForm(false);
   };
 
+  const deleteEmployee = (employeeId) => {
+    if (window.confirm('¿Estás seguro de que deseas eliminar este empleado?')) {
+      setEmployees(employees.filter(emp => emp.id !== employeeId));
+    }
+  };
+
+  const openDeleteModal = (employee) => {
+    setSelectedEmployee(employee);
+  };
+
+  const closeDeleteModal = () => {
+    setSelectedEmployee(null);
+  };
+
   return (
     <div className="min-h-screen dark:bg-gray-900 p-6">
       <div className="max-w-7xl mx-auto">
